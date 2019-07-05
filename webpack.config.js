@@ -3,14 +3,14 @@ const path = require('path')
 const config = {
   context: path.resolve(__dirname, './src'),
   devtool: 'cheap-module-source-map',
-  entry: ['babel-polyfill', './index.js'],
+  entry: ['./index.js'],
   output: {
     filename: 'index.js',
     path: path.resolve(__dirname, './dist'),
     library: 'aws-cognito-promises',
     libraryTarget: 'umd'
   },
-  externals: ['babel-polyfill', 'amazon-cognito-identity-js', 'aws-sdk'],
+  externals: ['amazon-cognito-identity-js', 'aws-sdk'],
   module: {
     rules: [
       {
